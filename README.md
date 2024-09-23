@@ -1,4 +1,5 @@
- ![Project Screenshot](./assets/screenshot.png)
+![Project Screenshot](./client/HomePage.png)
+
 
 # Online C++ Compiler
 
