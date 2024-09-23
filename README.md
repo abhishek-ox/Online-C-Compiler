@@ -1,4 +1,4 @@
-![Project Screenshot](client/HomePage.png)
+![Project Screenshot](preview.png)
 
 
 
