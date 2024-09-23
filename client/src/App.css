@@ -1,0 +1,161 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #e0e0e0; /* Light background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full viewport height */
+}
+
+.App {
+  background: white;
+  border-radius: 12px; /* Rounded corners */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Enhanced shadow for 3D effect */
+  padding: 30px;
+  width: 90%;
+  min-width: 1300px; /* Minimum width for larger screens */
+  text-align: center;
+}
+
+h1 {
+  color: #333;
+}
+
+.editor-container {
+  display: flex;
+  width: 100%;
+  height: calc(100vh - 100px); /* Adjust height as needed */
+}
+
+.code-section {
+  flex: 60%; /* 60% width for the code section */
+  padding: 20px;
+  border-right: 1px solid #ccc; /* Optional: Add a divider */
+}
+
+.output-section {
+  flex: 40%; /* 40% width for the output section */
+  padding: 20px;
+  overflow-y: auto; /* Scroll if output is too long */
+  max-width: 400px; /* Set a maximum width for the output section */
+}
+
+.font-size-container {
+  display: flex;
+  justify-content: space-between; /* Align "Choose Font Size" and dropdown */
+  margin-bottom: 10px; /* Space below the font size container */
+}
+
+/* Other existing styles... */
+
+.code-input {
+  width: 90%; /* Almost full width of the container */
+  height: calc(100vh - 350px); /* Dynamic height based on viewport */
+  padding: 15px; /* More padding for better feel */
+  border: 1px solid #ccc;
+  border-radius: 8px; /* Rounded corners */
+  resize: none; /* Prevent resizing */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Light shadow for textarea */
+}
+
+/* Handle font size options dynamically in the component, so no fixed font-size here */
+
+button {
+  background-color: #28a745; /* Green button */
+  color: white;
+  border: none;
+  padding: 12px 24px; /* Increased padding */
+  border-radius: 6px; /* Slightly larger rounded corners */
+  cursor: pointer;
+  font-size: 18px; /* Larger font size */
+  margin-top: 20px;
+}
+
+button:hover {
+  background-color: #218838; /* Darker green on hover */
+}
+
+.output-container {
+  background-color: #f9f9f9; /* Light grey background */
+  border: 1px solid #ddd;
+  border-radius: 8px; /* Rounded corners */
+  padding: 15px; /* Increased padding */
+  margin-top: 20px;
+  text-align: left; /* Align text to the left */
+  width: 100%; /* Full width of the output section */
+  overflow-wrap: break-word; /* Allow words to break and wrap */
+  white-space: normal; /* Ensure text wraps normally */
+  word-wrap: break-word; /* Fallback for older browsers */
+}
+
+.error-message {
+  color: red;
+  margin-top: 10px;
+}
+
+.font-size-container {
+  display: flex;
+  justify-content: space-between; /* Align "Choose Font Size" and dropdown */
+  width: 90%; /* Full width to match textarea */
+  margin-bottom: 10px; /* Space below the font size container */
+  font-size: 16px;
+}
+
+.font-size-dropdown {
+  border-radius: 5px;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  font-size: 14px;
+}
+
+/* Media Queries for Tablets */
+@media (max-width: 768px) {
+  .App {
+    padding: 30px;
+    min-width: 320px; /* Minimum width for smaller screens */
+    text-align: center;
+  }
+
+  .code-input {
+    height: calc(100vh - 300px); /* Adjust height for tablets */
+  }
+
+  button {
+    padding: 10px 20px; /* Adjust padding */
+    font-size: 16px; /* Slightly smaller button text */
+  }
+
+  .output-container {
+    width: 95%; /* Make output container slightly larger */
+  }
+
+  .font-size-container {
+    width: 95%; /* Adjust width for dropdown container */
+  }
+}
+
+/* Media Queries for Mobile Phones */
+@media (max-width: 480px) {
+  .code-input {
+    width: 100%; /* Full width for small screens */
+    height: calc(100vh - 250px); /* Adjust height for small screens */
+    padding: 10px; /* Less padding */
+  }
+
+  button {
+    padding: 8px 16px; /* Smaller padding */
+    font-size: 14px; /* Smaller font size for button */
+  }
+
+  .output-container {
+    width: 100%; /* Full width for output container */
+  }
+
+  .font-size-container {
+    width: 100%; /* Full width for dropdown container */
+    font-size: 14px; /* Smaller font size */
+  }
+}
